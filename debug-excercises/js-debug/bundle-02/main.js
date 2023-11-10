@@ -13,43 +13,49 @@
 // ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
-    const message = '';
+    let message = '';
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
         message = 'Hai più di 18 anni!';
     }
+    return message
 }
-checkAge();
+// Errori: manca return message e let message al posto di const
+console.log(checkAge());
 
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
 }
 printColorsNumber();
+// Errore length scritto male
 
 
 // ESERCIZIO 3
 function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
+    const userNumber = parseInt(prompt('Inserisci un numero'));
     const total = userNumber + 12;
 
-    console.log(`Il risultato finale è ${total}`);
+    console.log(`Il risultato finale è ${total}`);  
 }
-addNumbers();
+// addNumbers();
+// Errore manca parse int
 
 
 // ESERCIZIO 4
 function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
     const userEmail = prompt('Inserisci il tuo indirizzo email');
+    console.log(userEmail);
 
-    let grantAccess = 'false';
+    let grantAccess = false;
+    console.log(grantAccess);
 
     if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
+        grantAccess = true;
     }
 
     if (grantAccess === true) {
@@ -58,7 +64,8 @@ function checkAccess() {
         console.log('Accesso negato!');
     }
 }
-checkAccess();
+// checkAccess();
+// Errore: False e true come stringa e non booleano
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
@@ -81,13 +88,16 @@ function checkAccessImproved() {
 
         }
 
-        if (grantAccess) {
-            console.log('Accesso consentito!');
-        } else {
-            console.log('Accesso negato!');
-        }
     }
-    checkAccessImproved();
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+
+checkAccessImproved();
+// Errori } mancante alla fine, condizione nel ciclo
 
 
 
