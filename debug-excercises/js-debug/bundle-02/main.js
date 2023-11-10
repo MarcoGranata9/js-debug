@@ -11,8 +11,8 @@
 
 
 // ESERCIZIO 1
-function checkAge() {
-    const myAge = 32;
+function checkAge(myAge) {
+    // const myAge = 32;
     let message = '';
 
     if (myAge < 18) {
@@ -22,7 +22,7 @@ function checkAge() {
     }
     return message
 }
-// Errori: manca return message e let message al posto di const
+// Errori: manca return message e let message al posto di const my age può esser messo come parametro
 console.log(checkAge());
 
 // ESERCIZIO 2

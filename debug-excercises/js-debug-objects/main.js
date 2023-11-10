@@ -85,4 +85,10 @@ console.log(dieselCars);
 console.log('Tutte le altre auto');
 console.log(otherCars);
 
-// Errori , mancante nell' array di oggetti, arrow function scritta male riga 67, benzina e Benzina/ diesel e Diesel sono due stringhe diverse, filter di dieselCars manca return, otherCars operatore sbagliato || serve &&  
+/* Errori 
+, mancante nell' array di oggetti, 
+arrow function scritta male riga 67,
+benzina e Benzina/ diesel e Diesel sono due stringhe diverse, 
+filter di dieselCars manca return, 
+otherCars operatore sbagliato || serve && 
+*/ 
